@@ -18,4 +18,4 @@ Website kasir toko dibuat dengan Laravel 11, MySQL, dan Bootstrap 5.
 6. `php artisan serve`
 
 ## Video Penjelasan
-https://drive.google.com/drive/folders/1WKt2IKsqxQ0qLr8p0hRf8yKONmH3OKdb"# kasir-toko" 
+https://drive.google.com/drive/folders/1WKt2IKsqxQ0qLr8p0hRf8yKONmH3OKdb

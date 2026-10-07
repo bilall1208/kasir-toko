@@ -1,0 +1,366 @@
+:root {
+    --primary: #145c52;
+    --primary-dark: #0e453d;
+    --primary-light: #e6f2ef;
+    --bg: #f4f5f7;
+    --border: #e5e7eb;
+    --text-dark: #111827;
+    --text-muted: #6b7280;
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    --radius-sm: 10px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text-dark);
+    font-family: 'Segoe UI', system-ui, Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== NAVBAR ===== */
+.app-navbar {
+    background: #ffffff;
+    border-bottom: 1px solid var(--border);
+    box-shadow: none;
+    padding: 0.9rem 0;
+}
+
+.app-navbar .navbar-brand {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--text-dark);
+}
+
+.app-navbar .nav-link {
+    color: var(--text-muted);
+    font-weight: 500;
+    padding: 0.5rem 1rem !important;
+    border-radius: 999px;
+    transition: all 0.15s ease;
+}
+
+.app-navbar .nav-link.active,
+.app-navbar .nav-link:hover {
+    color: var(--primary-dark);
+    background: var(--primary-light);
+}
+
+.app-navbar .btn-outline-light {
+    color: var(--text-dark);
+    border-color: var(--border);
+    background: transparent;
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.app-navbar .btn-outline-light:hover {
+    background: var(--bg);
+    color: var(--text-dark);
+    border-color: var(--border);
+}
+
+/* ===== PAGE HEADER (flat, tanpa banner warna) ===== */
+.page-header {
+    background: transparent;
+    box-shadow: none;
+    border-radius: 0;
+    padding: 0;
+    margin-bottom: 2rem;
+    color: var(--text-dark);
+}
+
+.page-header h3 {
+    font-weight: 700;
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+    color: var(--text-dark);
+}
+
+.page-header p {
+    color: var(--text-muted);
+    margin-bottom: 0;
+}
+
+/* ===== CARD ===== */
+.card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 1px 3px rgba(16, 24, 40, 0.04);
+}
+
+.barang-card {
+    overflow: hidden;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.barang-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(16, 24, 40, 0.08);
+    border-color: var(--primary);
+}
+
+.barang-card img {
+    height: 170px;
+    object-fit: cover;
+}
+
+.barang-card .card-body {
+    padding: 1.2rem;
+}
+
+/* pakai warna primary baru untuk semua elemen text-primary bawaan Bootstrap */
+.text-primary {
+    color: var(--primary) !important;
+}
+
+/* ===== BUTTON ===== */
+.btn-primary {
+    background: var(--primary);
+    border-color: var(--primary);
+    border-radius: var(--radius-sm);
+    font-weight: 600;
+    padding: 0.55rem 1.3rem;
+    box-shadow: none;
+    transition: background 0.15s ease;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    border-color: var(--primary-dark);
+}
+
+.btn-outline-primary {
+    color: var(--primary);
+    border: 1.5px solid var(--primary);
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+.btn-outline-primary:hover {
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    border-color: var(--primary);
+}
+
+.btn-outline-danger, .btn-secondary {
+    border-radius: var(--radius-sm);
+    font-weight: 500;
+}
+
+/* ===== FORM ===== */
+.form-control, .form-select {
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--border);
+    padding: 0.6rem 0.9rem;
+    background: #fbfbfc;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+    background: #fff;
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-dark);
+}
+
+/* ===== AUTH PAGE (login/register) ===== */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    padding: 1.5rem;
+}
+
+.auth-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 24px rgba(16, 24, 40, 0.06);
+    max-width: 420px;
+    width: 100%;
+}
+
+.auth-card .card-body {
+    padding: 2.5rem 2rem;
+}
+
+img.logo {
+    max-width: 100%;
+    height: auto;
+    position: relative;
+  
+} 
+
+.auth-icon {
+    width: 76px;
+    height: 76px;
+    border-radius: 16px;
+    background: var(--primary-light);
+    color: var(--primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    margin: 0 auto 1rem;
+}
+
+/* ===== ALERT ===== */
+.alert {
+    border: none;
+    border-radius: 12px;
+}
+
+/* ===== TABLE (riwayat & item penjualan) ===== */
+.table thead th {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    border-bottom: 1px solid var(--border);
+}
+
+.table td {
+    border-color: var(--border);
+    vertical-align: middle;
+}
+
+/* ===== EMPTY STATE ===== */
+.empty-state {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: var(--text-muted);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 576px) {
+    .auth-card .card-body {
+        padding: 1.8rem 1.3rem;
+    }
+}
+
+/* ===== AUTH LANDSCAPE ===== */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg);
+    padding: 1.5rem;
+}
+
+.auth-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: 0 4px 24px rgba(16, 24, 40, 0.06);
+    max-width: 900px;   /* dilebarkan untuk mode landscape */
+    width: 100%;
+    overflow: hidden;
+}
+
+.auth-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* Panel kiri (branding) */
+.auth-brand {
+    flex: 1 1 42%;
+    background: var(--primary);
+    color: #fff;
+    padding: 3rem 2.2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+    text-align: left;
+}
+
+.auth-brand img {
+    width: 110px;
+    height: 110px;
+    object-fit: contain;
+    background: #fff;
+    border-radius: 20px;
+    padding: 12px;
+    margin: 0 auto 1.5rem;
+}
+
+.auth-brand h4 {
+    font-weight: 700;
+    margin-bottom: 0.6rem;
+}
+
+.auth-brand p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    margin-bottom: 1.8rem;
+}
+
+.auth-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    text-align: left;
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.7rem;
+}
+
+.auth-feature span.dot {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+}
+
+/* Panel kanan (form) */
+.auth-form {
+    flex: 1 1 58%;
+    padding: 2.8rem 2.5rem;
+}
+
+.auth-form h4 {
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+}
+
+.auth-form .subtitle {
+    color: var(--text-muted);
+    font-size: 0.92rem;
+    margin-bottom: 1.8rem;
+}
+
+@media (max-width: 767px) {
+    .auth-brand {
+        flex: 1 1 100%;
+        padding: 2.2rem 1.5rem;
+    }
+    .auth-brand img {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 1rem;
+    }
+    .auth-brand .auth-feature {
+        display: none;   /* sembunyikan list fitur di layar kecil biar ringkas */
+    }
+    .auth-form {
+        flex: 1 1 100%;
+        padding: 2rem 1.4rem;
+    }
+}
